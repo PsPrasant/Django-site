@@ -1,0 +1,35 @@
+<html>
+<head>
+<title> test_application</title>
+<script>
+{% if sessionid %}
+alert("{{sessionid}}");
+{% endif %}
+{% if username %}
+alert("{{username}}")
+{% endif %}
+</script>
+</head>
+<body>
+<form method="POST" action="/app001/1/'>
+{% csrf_token %} 
+
+<input type="submit"></input>
+</form>
+<form method="POST" action="/app001/2/'>
+{% csrf_token %} 
+
+<input type="submit"></input>
+</form>
+<form method="POST" action="/app001/3/'>
+{% csrf_token %} 
+
+<input type="submit"></input>
+</form>
+<form method="POST" action="/app001/4/'>
+{% csrf_token %} 
+
+<input type="submit"></input>
+</form>
+</body>
+</html>

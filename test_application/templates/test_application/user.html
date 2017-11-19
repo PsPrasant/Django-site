@@ -1,0 +1,18 @@
+<html>
+<head>
+<title> test_application</title>
+<script>
+{% if sessionid %}
+alert("{{sessionid}}");
+{% endif %}
+</script>
+</head>
+<body>
+<form method="POST" name="form1">
+{% csrf_token %} 
+<input name="username" type="text"> user name </input>
+<input name="password" type="text"> password </input>
+<input type="submit"></input>
+</form>
+</body>
+</html>
